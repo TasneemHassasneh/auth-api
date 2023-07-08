@@ -21,6 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use(authRoutes);
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 
 // Catchalls
 app.use(notFound);
